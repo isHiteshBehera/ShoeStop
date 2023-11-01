@@ -4,14 +4,19 @@
 
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <style>
         .center {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+            border-width: 2px;
         }
     </style>
+    <title>Shoe Stop</title>
 </head>
 
 <div class="center">
@@ -19,13 +24,13 @@
     <form class="text-center border border-light p-5" action="success" method="POST">
         {% csrf_token %}
 
-        <p class="h3 mb-3"><i class="fas fa-coffee"></i> BUY ME A COFFEE!!</p>
-        <p class="mb-3">Help us create more videos by donating 500 INR</p>
+        <h3 style="font-family: 'Poppins', sans-serif; font-weight: 300;"><strong>- ShoeStop -</strong></h3>
+        <p class="mb-3">Let's introduce ourself and proceed with the payments</p>
 
-        <input type="name" name="name" id="name" required class="form-control mb-4" placeholder="Name">
+        <input type="name" name="name" id="name" required class="form-control mb-4" placeholder="How should we call you ?">
 
         <!-- RAZORPAY INTEGRATION HERE -->
-        <script src="https://checkout.razorpay.com/v1/checkout.js" data-key="rzp_test_9nmrK825fjo0Ym"
+        <script src="https://checkout.razorpay.com/v1/checkout.js" data-key="rzp_test_Mqk3314SWUdGID"
             data-amount="50000" data-currency="INR" data-order_id="{{payment.id}}" data-buttontext="Pay with Razorpay"
             data-name="Professional Cipher" data-description="Django and Data Science"
             data-image="https://example.com/your_logo.jpg" data-prefill.name="PC" data-prefill.email="pc@studygyaan.com"
